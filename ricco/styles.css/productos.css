@@ -95,6 +95,7 @@ h2{
     position: relative; /* tiene que tener posición relativa para que la absoluta funcione*/
     transform-style: preserve-3d;
     transition: all 600ms; /*para que se vea el giro d la card en 3D*/
+    border-radius: 20px;
 }
 
 .card__front {
@@ -212,26 +213,4 @@ h2{
     padding-top:25px;
     text-align: center;
     font-size: 16px;
-}
-
-.btn-wsp{
-    position:fixed;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    bottom:30px;
-    right: 30px;
-    background: #0df053;
-    color:#fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-}
-
-.btn-wsp:hover{
-    text-decoration: none;
-    color:#0df053;
-    background: #fff;
 }
