@@ -1,23 +1,18 @@
+
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap'); */
 
 
 *{
-    /* margin: 0; */
+    margin: 0;
     padding: 0;
-    /* box-sizing:border-box; */
+    box-sizing:border-box;
     font-family: "lato", sans-serif;
 }
-
- 
 
 body{
     margin:0px;
     padding:0px;
-    /* background-image:url(/img/Diseño\ sin\ título\ \(17\).png); */
     background-color:#F2F2F2bc;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-position: 0% 95%;
     width:100%;
 }
 
@@ -35,6 +30,7 @@ ul img.icon {
     margin-top:8px;
     cursor: pointer;
 }
+
 ul li {
     float: right;
     width:140px;
@@ -57,13 +53,11 @@ ul li a:hover{
     transition: 0.6s all;
 }
 
-
 h1{
     text-align: center;
-    /* color: #3C424F; */
     color: #000;
     text-shadow: 0.1em 0.1em 0.2em #3C424F;
-    margin-top: 50px;
+    margin: 80px auto;
     letter-spacing: .3em;
 }
 
@@ -72,14 +66,14 @@ h2{
     color: #fff;
     font-size: 23px;
     text-shadow: 0.1em 0.2em 0.2em black;
-    margin-top: 50px;
-    /* letter-spacing: .5em; */
+    margin-top: 20px;
+    letter-spacing: .1em;
 }
 
 .container__card {
     max-width: 1200px;
     margin: auto;
-    margin-top:50px;
+    margin-top: 50px;
     perspective: 1000px;/* para que se vea el giro de la card en 3D */
     display: flex;
     justify-content: center;
@@ -87,9 +81,8 @@ h2{
 }
 
 .card__father {
-    margin:20px 20px 50px;
+    margin: 20px 20px 50px;
     perspective: 1000px;
-    /* -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0,0,0,0.4));  */
 }
 
 .card__father:hover .card {
@@ -98,7 +91,7 @@ h2{
 
 .card {
     width: 250px;
-    height: 300px;
+    height: 350px;
     position: relative; /* tiene que tener posición relativa para que la absoluta funcione*/
     transform-style: preserve-3d;
     transition: all 600ms; /*para que se vea el giro d la card en 3D*/
@@ -118,7 +111,7 @@ h2{
     height:100%;
     position: absolute;
     top:0; /*para que se mantengan pegados a arriba*/
-    left:0; /*para que se mantengan pegados a abajo*/
+    left:0; 
     backface-visibility: hidden;
     transform-style: preserve-3d;
     border-radius: 20px;
@@ -131,7 +124,6 @@ h2{
 
 .button{
     padding: 10px 40px;
-    /* margin-top:30px; */
     font-size: 16px;
     cursor:pointer;
     border: none;
@@ -140,6 +132,13 @@ h2{
     text-decoration:none;
     letter-spacing:1.5px;
     box-sizing:border-box;
+    position:absolute;
+    top: 75%;
+    left: 20%;
+}
+
+.button:hover{
+    transform:scale(1.1);
 }
 
 .body__card_front {
@@ -175,9 +174,16 @@ h2{
     margin-top: 7px;
     letter-spacing: 1px;
     line-height: 21px;
-    font-size: 16px;
-    
+    font-size: 16px;   
 }
+
+.body__card_back .price {
+    font-size:25px ;
+    margin:30px auto;
+    font-weight: bold;
+    color: red;
+}
+
 
 .body__card_back .button{
     padding: 10px 40px;
@@ -187,37 +193,23 @@ h2{
     border: none;
     color: white;
     background: #3C424F;
-    /* box-shadow: 1px 1px 30px -5 #3C424F; */
     border-radius: 10px;
-    transition: box-shadow 600ms;
-}
-
-
-a .button:hover{
-    transform:scale(1.1);
     transition: 0.7s ease-in-out;
-    box-shadow: 1px 1px 30px 600ms;
-    text-decoration: none;
 }
 
 .footerContainer {
-    /* background-color: #002244; */
-
+    background-color: #000;
     width:100%;
-    height: 200px;
-    margin-top: 180px;
+    height: 100px;
+    margin-top: 80px;
     line-height: 25px;
-    padding-top:5px;
-    padding-bottom: 5px;
 }
 
 .footerP {
-    margin-top: 0px;
     font-weight: 100;
     color: #fff;
     letter-spacing: 2px;
-    text-shadow: 0.1em 0.1em 0.2em black;
-    margin-top: 120px;
+    padding-top:25px;
     text-align: center;
     font-size: 16px;
 }
