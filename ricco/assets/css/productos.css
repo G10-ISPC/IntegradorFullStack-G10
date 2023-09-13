@@ -1,7 +1,3 @@
-
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap'); */
-
-
 *{
     margin: 0;
     padding: 0;
@@ -12,45 +8,8 @@
 body{
     margin:0px;
     padding:0px;
-    background-color:#F2F2F2bc;
+    background-color:#0b0b0bbc;
     width:100%;
-}
-
-nav{    
-    width: 100%;
-    height: 80px;
-    background-color: #000;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul img.icon {
-    margin-top:8px;
-    cursor: pointer;
-}
-
-ul li {
-    float: right;
-    width:140px;
-    font-size: 15px;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    transition: 0.6s all;
-}
-
-ul li a:hover{
-    background-color: #fff;
-    color: #000;
-    transition: 0.6s all;
 }
 
 h1{
@@ -74,10 +33,10 @@ h2{
     max-width: 1200px;
     margin: auto;
     margin-top: 50px;
-    perspective: 1000px;/* para que se vea el giro de la card en 3D */
+    perspective: 1000px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /*para que sea responsive*/
+    flex-wrap: wrap;
 }
 
 .card__father {
@@ -92,9 +51,9 @@ h2{
 .card {
     width: 250px;
     height: 350px;
-    position: relative; /* tiene que tener posición relativa para que la absoluta funcione*/
+    position: relative; 
     transform-style: preserve-3d;
-    transition: all 600ms; /*para que se vea el giro d la card en 3D*/
+    transition: all 600ms; 
     border-radius: 20px;
 }
 
@@ -111,7 +70,7 @@ h2{
     width: 100%;
     height:100%;
     position: absolute;
-    top:0; /*para que se mantengan pegados a arriba*/
+    top:0; 
     left:0; 
     backface-visibility: hidden;
     transform-style: preserve-3d;
@@ -146,11 +105,11 @@ h2{
     width: 100%;
     height: 100%;
     font-size: 10px;
-    text-align: center;  /* alinea texto en el centro*/
+    text-align: center; 
     padding: 40px;
-    display: flex; /*alinea texto en el centro*/
-    justify-content:center; /*alinea texto en el centro*/
-    align-items: center; /*alinea texto en el centro*/
+    display: flex; 
+    justify-content:center; 
+    align-items: center; 
     color:#fff;
     transform: translateZ(60px);
 }
@@ -198,19 +157,3 @@ h2{
     transition: 0.7s ease-in-out;
 }
 
-.footerContainer {
-    background-color: #000;
-    width:100%;
-    height: 100px;
-    margin-top: 80px;
-    line-height: 25px;
-}
-
-.footerP {
-    font-weight: 100;
-    color: #fff;
-    letter-spacing: 2px;
-    padding-top:25px;
-    text-align: center;
-    font-size: 16px;
-}
