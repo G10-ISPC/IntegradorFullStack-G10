@@ -38,7 +38,7 @@ Los mismos se realizarón en equipo, teniendo en cuanta los principios y valores
 + PYTHON
 
 ## Integrantes
-+ Grade, Marisol Belén(Scrum master) Developer team
++ Grade, Marisol Belén(Scrum master)
 + Juarez Manescotto, Micaela Ines 
 + Cruz, Laura Patricia 
 + Colacci, Tomás Ardiles 
