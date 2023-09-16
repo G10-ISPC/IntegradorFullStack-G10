@@ -17,7 +17,7 @@ div .position-absolute h2{
 .burguers1{
     text-align:center;
     justify-content: center;
-    color: rgb(255, 255, 255)
+    color: rgb(0, 0, 0)
 }
 .btn-color{
     background-color: rgb(106, 165, 18);
@@ -27,12 +27,7 @@ div .position-absolute h2{
     filter:brightness(50%);
     -webkit-filter:brightness(50%);
 }
-.carousel-text{
-position: absolute;
-left:100px;
-top: 250px;
 
-}
 .card__align--center{
     display:flex;
     flex-direction: column;
@@ -64,4 +59,16 @@ top: 250px;
 }
 footer{
 margin-top: auto;
+}
+.link {
+    text-decoration:none ; 
+    color: rgb(255, 255, 255);
+    ;
+}
+a:hover{
+    color: rgb(10, 10, 10);
+    font-size: small;
+}
+body #formulario{
+    background-color:rgba(201, 202, 202, 0.795);
 }
