@@ -72,6 +72,10 @@ a:hover{
     color: rgb(10, 10, 10);
     font-size: small;
 }
-body #formulario{
-    background-color:rgba(201, 202, 202, 0.795);
+body #bg {
+    background-color:#0b0b0bbc;
+}
+.nosotros{
+    color:#fff
+
 }
