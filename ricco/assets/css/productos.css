@@ -8,9 +8,12 @@
 body{
     margin:0px;
     padding:0px;
-    background-color:#0b0b0bbc;
-    /*background-color: rgba(201, 202, 202, 0.795);*/
+    /* background-color:#0b0b0bbc; */
+   
     width:100%;
+    
+    background: rgb(132,132,132);
+    background: linear-gradient(56deg, rgba(132,132,132,1) 35%, rgba(212,212,212,1) 100%);
 }
 
 h1{
@@ -142,7 +145,7 @@ h2{
     font-size:25px ;
     margin:30px auto;
     font-weight: bold;
-    color: red;
+    color: #F12C3E;
 }
 
 
@@ -152,9 +155,13 @@ h2{
     font-size: 16px;
     cursor: pointer;
     border: none;
-    color: white;
-    background: #3C424F;
+    color: black;
+    border: 2px solid #212529;
     border-radius: 10px;
-    transition: 0.7s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
+.body__card_back .button:hover{
+    color: white;
+    background-color: #212529;
+}
