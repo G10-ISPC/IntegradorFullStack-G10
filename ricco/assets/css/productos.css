@@ -8,8 +8,12 @@
 body{
     margin:0px;
     padding:0px;
-    background-color:#0b0b0bbc;
+    /* background-color:#0b0b0bbc; */
+   
     width:100%;
+    
+    background: rgb(132,132,132);
+    background: linear-gradient(56deg, rgba(132,132,132,1) 35%, rgba(212,212,212,1) 100%);
 }
 
 h1{
@@ -17,7 +21,7 @@ h1{
     color: #000;
     text-shadow: 0.1em 0.1em 0.2em #3C424F;
     margin: 80px auto;
-    letter-spacing: .3em;
+    letter-spacing: 0em;
 }
 
 h2{
@@ -87,7 +91,8 @@ h2{
     font-size: 16px;
     cursor:pointer;
     border: none;
-    color:white;
+    /* color:white; */
+    background-color: #212529;
     border-radius:10px;
     text-decoration:none;
     letter-spacing:1.5px;
@@ -141,7 +146,7 @@ h2{
     font-size:25px ;
     margin:30px auto;
     font-weight: bold;
-    color: red;
+    color: #F12C3E;
 }
 
 
@@ -152,8 +157,12 @@ h2{
     cursor: pointer;
     border: none;
     color: white;
-    background: #3C424F;
+    border: 2px solid #212529;
     border-radius: 10px;
-    transition: 0.7s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
+.body__card_back .button:hover{
+    color: white;
+    background-color: #212529;
+}
