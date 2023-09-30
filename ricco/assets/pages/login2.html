@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LOGIN Y REGISTRO RICCO</title>
+</head>
+<body>
+    
+<div class="contenedor">
+    <div class="caja" id="form">
+        <!------------------ CAJA DE INGRESO --------------------->
+        <div class="contenedor-ingreso" id="ingreso">
+
+            <div class="caja-titulo">
+                <h3>Bienvenido</h3>
+                <span class="icon"><img src="imagenes/ricco.png" alt=""></span>
+                <small>Que bueno verte otra vez!!</small>
+            </div>
+            <div class="grupo-inputs">
+                <div class="campo-input">
+                    <input type="text" class="caja-input" id="logEmail" required >
+                    <label for="logEmail">E-mail</label>
+                </div>
+                <div class="campo-input">
+                    <input type="password" class="caja-input" id="contrasenaIngreso" required >
+                    <label for="contrasenaIngreso">Contraseña</label>
+                    <div class="ver-area">
+                            <div id="cualOjo" class="ver-box" >
+                                <i class="fa-regular fa-eye" id="ver"></i>
+                                <i class="fa-regular fa-eye-slash" id="ver-slash"></i>
+                            </div>
+                    </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formCheck" class="check">
+                    <label for="formCheck">Recordarme</label>
+                </div>
+                <div class="campo-input">
+                    <input type="submit" class="input-submit" value="Ingresar">
+                </div>
+            </div>
+        </div>
+
+<!-------------------- CAJA DE REGISTRO --------------------------->
+
+        <div class="contenedor-registro" id="registro">
+
+            <div class="caja-titulo">
+                <h3>Registrate</h3>
+                <span class="icon"><img src="../imagenes/ricco.png" alt=""></span>
+                <small>Estamos felices de tenerte por aquí</small>
+            </div>
+            <div class="grupo-inputs">
+                <div class="campo-input">
+                    <input type="text" class="caja-input" id="regUser" required>
+                    <label for="regUser">Usuario</label>
+                </div>
+                <div class="campo-input">
+                    <input type="text" class="caja-input" id="regEmail" required>
+                    <label for="regEmail">E-mail</label>
+                </div>
+                <div class="campo-input">
+                    <input type="password" class="caja-input" id="contrasenaRegistro" required>
+                    <label for="contrasenaRegistro">Contraseña</label>
+                    <div class="ver-area">
+                            <div id="queOjo" class="ver-box">
+                                <i class="fa-regular fa-eye" id="ver-2"></i>
+                                <i class="fa-regular fa-eye-slash" id="ver-slash-2"></i>
+                            </div>
+                    </div>
+                </div>
+                <div class="recordar">
+                    <input type="checkbox" id="formCheck-2" class="check">
+                    <label for="formCheck-2">Recordarme</label>
+                </div>
+                <div class="campo-input">
+                    <input type="submit" class="input-submit" value="Registrarme">
+                </div>
+                
+            </div>
+        </div>
+
+    <!------------------------ CAMBIO -------------------------->
+        <div class="cambio">
+            <a id="in" href="#" class="login">Ingreso</a>
+            <a id="re" href="#" class="register">Registro</a>
+            <div class="btn-active" id="btn"></div>
+            <p class="warnings" id="warnings"></p>
+        </div>
+
+    </div>
+</div>
+<script src="../js/login2.js"></script>
+</body>
+</html>
