@@ -8,12 +8,10 @@
 body{
     margin:0px;
     padding:0px;
-    /* background-color:#0b0b0bbc; */
-   
     width:100%;
-    
-    background: rgb(132,132,132);
-    background: linear-gradient(56deg, rgba(132,132,132,1) 35%, rgba(212,212,212,1) 100%);
+    /* background: rgb(132,132,132); */
+    /* background: linear-gradient(56deg, rgba(132,132,132,1) 35%, rgba(212,212,212,1) 100%); */
+    background: #E6E4E5;
 }
 
 h1{
