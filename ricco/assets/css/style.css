@@ -64,6 +64,8 @@ footer{
 margin-top: 0;
 }
 .link {
+    margin-top: 0;
+    padding-top: 0;
     text-decoration:none ; 
     color: rgb(255, 255, 255);
     ;
