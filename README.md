@@ -37,14 +37,14 @@ Los mismos se realizarón en equipo, teniendo en cuanta los principios y valores
 + MYSQL WORKBENCH
 + PYTHON
 
+### SPRINT 2
+Realizamos las Historias de Usuarios en base a los requerimientos del proyecto para el Sprint 2 y a la devolucion del Sprint 1, las cuales fueron asignadas a los integrantes del equipo, para tener asi una forma de trabajo mas organizada.
+
 ## Integrantes
-+ Grade, Marisol Belén(Scrum master)
 + Juarez Manescotto, Micaela Ines 
 + Cruz, Laura Patricia 
-+ Colacci, Tomás Ardiles 
 + Figueroa, Félix Antonio 
 + Cos, Mariana
-+ Abba, Francisco Tomas
 + Arévalo, Carla Elizabeth
 + Aricoma, Delfina
 
