@@ -50,7 +50,7 @@ def ejecutar_opcion(opcion):
     elif opcion == 3:
         nuevo_producto = funciones.datos_para_nvoproducto()
         try:
-            dao.modificar_datos(*nuevo_producto)
+            dao.modificar_datos(nuevo_producto)
         except Exception as e:
             print("Ocurrio un error", str(e))
     elif opcion == 4:
