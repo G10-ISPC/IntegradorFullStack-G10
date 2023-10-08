@@ -10,7 +10,7 @@ class DAO():
           self. connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='',
+            password='123456',
             database='bd_ricco'
         )
        except Error as ex:
@@ -39,14 +39,12 @@ class DAO():
            except Error as ex: 
               print ("Error al intentar conexión: {0}".format(ex))          
           
-   def modificar_datos (self, id_producto, nvo_nombre, nva_descripcion, nvo_precio):
-      
+   def modificar_datos (self, productos):   
       if self.connection.is_connected():
            try:
               cursor = self.connection.cursor()
-              sql = "UPDATE productos SET nombre_producto = %s, descripcion = %s, precio = %s WHERE id_producto = %s"
-              values =(id_producto, nvo_nombre, nva_descripcion, nvo_precio)
-              cursor.execute (sql, values ) 
+              sql = "UPDATE productos SET nombre_producto = '{0}', descripcion = '{1}', precio = '{2}' WHERE id_producto = '{3}'"
+              cursor.execute(sql.format(productos[1], productos[2], productos[3], productos[0]))
               self.connection.commit()
               print("¡Producto modificado con éxito!\n")
            except Error as ex: 
