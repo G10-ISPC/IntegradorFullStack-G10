@@ -19,4 +19,26 @@ function registrar(){
     boton.style.left = "150px";
 }
 
+// =================================================================
+// ----------------VALIDACION DE CORREO ELECTRÓNICO-----------------
 
+const emailInput = document.getElementById('logEmail');
+const mensajeError = document.getElementById('mensajeError');
+
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+
+function validarEmail() {
+    const email = emailInput.value;
+    if (emailRegex.test(email)) {
+        mensajeError.textContent = ''; 
+    } else {
+        mensajeError.textContent = 'Ingrese un E-mail válido por favor.';
+        
+    }
+}
+
+emailInput.addEventListener('input', validarEmail);
+
+
+// =====================================================================
