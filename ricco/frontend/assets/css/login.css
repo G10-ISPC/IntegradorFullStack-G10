@@ -27,8 +27,16 @@ main{
     flex-direction: row;
     position: relative;
     padding: 40px 20px 30px 20px;
-    height: 615px;
+    height: 400px;
     width: 350px;
+    background-color: rgba(255, 220, 220, 0.4);
+    border-radius: 30px;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+.caja2{
     background-color: rgba(255, 220, 220, 0.4);
     border-radius: 30px;
     -webkit-backdrop-filter: blur(15px);
@@ -88,7 +96,19 @@ main{
     outline: none;
     
 }
-
+.caja-input1{
+    width: 49%;
+    height: 40px;
+    font-size: 15px;
+    color: #040404;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 45px 0 20px;
+    background: rgba(224, 223, 223, 0.6);
+    backdrop-filter: blur(2px);
+    outline: none;
+    
+}
 .campo-input label {
     position: absolute;
     left: 20px;
@@ -163,4 +183,10 @@ main{
         padding: 20px 20px 30px 20px;
         height: 590px;
     }
+}
+.a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 10px;
+    color: darkgray;
 }

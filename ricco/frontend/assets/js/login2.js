@@ -1,10 +1,10 @@
 // ---------------LLAMADO A FUNCIONES----------------
 document.getElementById("in").addEventListener("click", ingresar);
-document.getElementById("re").addEventListener("click", registrar);
+//document.getElementById("re").addEventListener("click", registrar);
 
 // ------------CAJA INGRESO Y REGISTRO---------------
 let cajaIngreso = document.getElementById('ingreso');
-let cajaRegistro = document.getElementById('registro');
+//let cajaRegistro = document.getElementById('registro');
 let boton = document.getElementById('btn');
 
 function ingresar(){
