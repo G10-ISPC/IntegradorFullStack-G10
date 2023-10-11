@@ -83,8 +83,8 @@ body #bg {
 }
 #team {
     background: #ffffff;
-    background: -webkit-linear-gradient(to top, #8692c6, #000000);
-    background: linear-gradient(to top, #8798be, #000000);
+    background: -webkit-linear-gradient(to top, #707070, #000000);
+    background: linear-gradient(to top, #444248, #000000);
     min-height: 100vh;
 }
 
@@ -109,4 +109,14 @@ body #bg {
     background: #ddd;
     text-decoration: none;
     color: #555;
+}
+
+.master {
+    background: #000;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
