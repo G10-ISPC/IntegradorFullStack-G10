@@ -78,6 +78,35 @@ body #bg {
     background-color:#0b0b0bbc;
 }
 .nosotros{
-    color:#fff
+    color:#252525
 
+}
+#team {
+    background: #ffffff;
+    background: -webkit-linear-gradient(to top, #8692c6, #000000);
+    background: linear-gradient(to top, #8798be, #000000);
+    min-height: 100vh;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.social-link:hover, .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
 }
