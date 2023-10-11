@@ -1,6 +1,8 @@
 from conexion import DAO
 
-import funciones
+#import funciones
+
+from pymodul.usuarios import Usuario
 
 def gestion_productos():
     continuar = True
@@ -31,30 +33,34 @@ def gestion_productos():
 
 def ejecutar_opcion(opcion):
     dao = DAO()
+    #usuario_instance = Usuario (None, None, None, None)
+    #usuario = Usuario()
+    #producto = Producto()
     if opcion == 1:
         try:
             productos = dao.lista_productos()
             if len(productos) > 0:
-                funciones.lista_productos(productos)   
+                Usuario.admin_ver_productos()  
+                #usuario_instance.admin_ver_productos(productos)
             else:
                 print("No hay productos")
         except Exception as e:
             print("Ocurrio un error", str(e))
 
     elif opcion == 2:
-        producto = funciones.datos_para_registro()
+        producto = Usuario.admin_crear_productos()
         try:
             dao.registrar_producto(producto)
         except Exception as e:
             print("Ocurrio un error", str(e))   
     elif opcion == 3:
-        nuevo_producto = funciones.datos_para_nvoproducto()
+        nuevo_producto = Usuario.admin_modificar_productos()
         try:
             dao.modificar_datos(nuevo_producto)
         except Exception as e:
             print("Ocurrio un error", str(e))
     elif opcion == 4:
-        id_producto= funciones.datos_para_eliminar()
+        id_producto= Usuario.admin_eliminar_productos()
         try:
             dao.eliminar_producto(id_producto)
         except Exception as e:
