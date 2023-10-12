@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.value = '';
             contrasenaInput.value = '';
             mensajeError.textContent = '';
+            window.location.href = "https://g10-ispc.github.io/IntegradorFullStack-G10/ricco/frontend/index.html";
         } else {
             event.preventDefault(); 
             mensajeError.textContent = 'Ambos campos deben ser completados correctamente.';
