@@ -11,12 +11,14 @@ class DAO:
             password='',
             database='bd_ricco'
         )
+          self.curosr = self.connection.cursor() #
        except Error as ex:
          print ("Error al intentar conexión: {0}".format(ex))
+         
 #-------------------------registro_inicio------------------------------
     def execute_query(self, query, values=None):
         self.cursor.execute(query, values)
-        self.connetion.commit()
+        self.connection.commit()
 
     def fetch_all(self):
         return self.cursor.fetchall()
@@ -33,6 +35,7 @@ class DAO:
               cursor = self.connection.cursor()
               cursor.execute("SELECT * FROM productos ORDER BY nombre_producto ASC")
               resultados = cursor.fetchall()
+              cursor.close() #
               
               return resultados
            
