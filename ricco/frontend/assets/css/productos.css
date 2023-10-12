@@ -14,6 +14,11 @@ body{
     background: #E6E4E5;
 }
 
+#fondo {
+    background-color: #475162;
+    
+}
+
 h1{
     text-align: center;
     color: #000;
@@ -25,9 +30,9 @@ h1{
 
 h2{
     text-align: center;
-    /*color: #fff;
+    color: #fff;
     font-size: 23px;
-    text-shadow: 0.1em 0.2em 0.2em black;*/
+    text-shadow: 0.1em 0.2em 0.2em black;
     margin-top: 20px;
     letter-spacing: .1em;
 }
@@ -261,3 +266,4 @@ table.table .form-control.error {
 table.table td .add {
     display: none;
 }
+
