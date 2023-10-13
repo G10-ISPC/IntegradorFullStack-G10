@@ -11,7 +11,7 @@ class DAO:
             password='',
             database='bd_ricco'
         )
-          self.curosr = self.connection.cursor() #
+          self.cursor = self.connection.cursor() #
        except Error as ex:
          print ("Error al intentar conexión: {0}".format(ex))
          

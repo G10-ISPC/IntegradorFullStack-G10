@@ -26,7 +26,7 @@ if __name__ == "__main__":
             id_rol = 2 
 
             nuevo_usuario = Usuario(None, apellido, nombre, email, telefono, clave_usuario, id_direccion, id_rol)
-            nuevo_usuario.registrar(dao)
+            nuevo_usuario.clien_registrarse(dao)
             print("Usuario registrado exitosamente como cliente.")
 
         elif opcion == "2":

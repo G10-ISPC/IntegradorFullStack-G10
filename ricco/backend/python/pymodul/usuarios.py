@@ -79,7 +79,7 @@ class Usuario:
         
 
 
-    def registrar(self,dao):
+    def clien_registrarse(self,dao):
         try:
             query = "INSERT INTO usuarios (apellido, nombre, email, telefono, clave_usuario, id_direccion, id_rol) VALUES (%s, %s, %s, %s, %s, %s, %s)"
             values = (self._apellido, self._nombre, self._email, self._telefono, self._clave_usuario, """self._id_direccion, self._id_rol""")
@@ -141,6 +141,17 @@ class Usuario:
         print(" ")
     
         return id_producto
+    def clien_ver_menu(self):
+        pass
+    
+    def clien_seleccionar_productos(self):
+        pass
+    
+    def clien_quitar_productos(self):
+        pass
+    
+    def clien_realizar_compra(self):
+        pass
         
     def cerrar_sesion(self):
         pass
