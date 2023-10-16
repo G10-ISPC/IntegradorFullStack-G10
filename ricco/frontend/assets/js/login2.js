@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailRegExpression.test(email)) {
             mensajeError.textContent = ''; 
         } else {
-            mensajeError.textContent = 'Ingrese un E-mail válido por favor.';
+            mensajeError.textContent = 'Ingrese un e-mail válido por favor.';
             ocultarMensajeError();
         }
     }
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.value = '';
             contrasenaInput.value = '';
             mensajeError.textContent = '';
-            window.location.href = "https://g10-ispc.github.io/IntegradorFullStack-G10/ricco/frontend/index.html";
+            window.location= "https://g10-ispc.github.io/IntegradorFullStack-G10/ricco/frontend/index.html";
         } else {
             event.preventDefault(); 
-            mensajeError.textContent = 'Ambos campos deben ser completados correctamente.';
+            mensajeError.textContent = 'E-mail o contraseña incorrecta.';
             ocultarMensajeError();
         }
     });

@@ -191,3 +191,9 @@ main{
     line-height: 10px;
     color: darkgray;
 }
+.enlace{
+    text-decoration: none;
+    font-size: 14px;
+    color: #040404;
+    
+}
