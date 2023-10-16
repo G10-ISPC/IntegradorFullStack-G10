@@ -19,7 +19,7 @@
     <link rel="icon" href="../assets/img/favicon.ico">
     <title>RICCO BURGERS</title>
   </head>
-  <body id="fondo">
+  <body id="adm">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
@@ -52,58 +52,81 @@
       </nav>
     </header>
     <main>
-        
-            <div class="container-lg" id="crud">
-                <div class="table-responsive">
-                    <div class="table-wrapper">
-                        <div class="table-title">
-                            <div class="row">
-                                <div class="col-sm-8"><h1>Productos <b>Ricco</b></h1></div>
-                                <div class="col-sm-4">
-                                    <button type="button" class="btn btn-dark add-new"><i class="fa fa-plus"></i> Añadir nuevo</button>
-                                </div>
-                            </div>
-                        </div>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Foto</th>
-                                    <th>Descripción</th>
-                                    <th>Precio</th>
-                                    <th>Acciones</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>KING KONG BURGER</td>
-                                    <td><img src="../assets/img/bur1.jpg" height="50"  alt="foto de hamburguesa 1"></td>
-                                    <td><P>Para compartir!!! 6/8 porciones. Impresionante Burger XXL de 1kg, de carne, con queso cheddar fundido, lechuga, tomate y panceta crocante</P></td>
-                                    <td>$4500</td>
-                                    <td>
-                                        <a class="add" title="Add" data-toggle="tooltip"><i class="fa-solid fa-check"></i></a>
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa-solid fa-pencil"></i></a>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="fa-solid fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>TASTY RICCA</td>
-                                    <td><img src="../assets/img/bur2.jpg" height="50"  alt="foto dehamburguesa 2"></td>
-                                    <td><p>Pan casero. Burger de carne 220gr. Queso cheddar fundido, lechuga, tomate huevo planchado, panceta crocante y cebolla asada</p></td>
-                                    <td>$2450</td>
-                                    <td>
-                                        <a class="add" title="Add" data-toggle="tooltip"><i class="fa-solid fa-check"></i></a>
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa-solid fa-pencil"></i></a>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="fa-solid fa-trash"></i></a>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>     
+      <div class="container mt-5">
+        <div class="text-center ">
+          <h1 class="display-5 mb-5" > <strong>Productos nuevos</strong></h1>
+        </div>
+        <div class="main row justify-content-center">
+          <div class="p-4 mb-2 bg-secondary text-light col-8">
+            <h2>Datos del producto</h2>
+          <form action="" id="productos-form" class="row justify-content-center mb-4 " autocomplete="off">
+            <div class="col-10 mb-3">
+              <label for="nombreproducto">Nombre del producto nuevo</label>
+              <input type="text" name="nombreproducto" id="nombreproducto" class="form-control" placeholder="Ingresa el nombre del producto nuevo">
+            </div>
+            <div class="col-10 mb-2">
+              <label for="foto">Foto del producto</label> <br>
+              <input type="file" class="form-control-file" id="foto">
+            </div>
+            <div class="col-10 mb-3">
+              <label for="descripcion">Descripción</label>
+              <textarea class="form-control" id="descripcion"  rows="3"></textarea>
+            </div>
+            <div class="col-10 mb-3">
+              <label for="precio">Precio</label> 
+              <input type="text" name="precio" id="precio" class="form-control" placeholder="Por Ejm: 2550 ">
+            </div>
+            <div class="col-12 col-md-10 text-end">
+              <button type="button submit" value="submit" class="btn btn-dark add-btn "><i class="fa fa-plus"></i> Añadir nuevo</button>
+          </div>
+         </form>
+        </div>
+
+          <div class="col-12 mt-5">
+            <table>
+              <table class="table table-bordered table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Foto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="productos-list">
+                  <tr>
+                      <td>KING KONG BURGER</td>
+                      <td><img src="../assets/img/bur1.jpg" height="50"  alt="foto de hamburguesa 1" id="foto" name="foto"></td>
+                      <td>Para compartir!!! 6/8 porciones. Impresionante Burger XXL de 1kg, de carne, con queso cheddar fundido, lechuga, tomate y panceta crocante</td>
+                      <td>$4500</td>
+                      <td>
+                          <a class="edit btn btn-sm" title="Editar"  id="edit" href="#"><i class="fa-solid fa-pencil"></i></a>
+                          <a class="delete btn btn-sm " title="Eliminar" id="delete" href="#"><i class="fa-solid fa-trash"></i></a>
+                      </td>
+                  </tr>
+
+                  <tr>
+                    <td>TASTY RICCA</td>
+                    <td><img src="../assets/img/bur2.jpg" height="50"  alt="foto de hamburguesa 2" id="foto" name="foto"></td>
+                    <td>Pan casero. Burger de carne 220gr. Queso cheddar fundido, lechuga, tomate huevo planchado, panceta crocante y cebolla asada</td>
+                    <td>$2450</td>
+                    <td>
+                        <a class="edit btn btn-sm" title="Editar" id="edit" href="#"><i class="fa-solid fa-pencil"></i></a>
+                        <a class="delete btn btn-sm " title="Eliminar" id="delete" href="#"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                
+                  
+              </tbody>
+
+            </table>
+          </div> 
+          
+        </div>
+      </div>
+      <br><br><br><br>
         
     </main>
     
@@ -140,6 +163,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"
       ></script>
+      <script src="../assets/js/adm.js"></script>
       
     </body>
 
