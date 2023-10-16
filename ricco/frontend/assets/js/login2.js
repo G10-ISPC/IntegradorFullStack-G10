@@ -30,16 +30,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    /*Roles:
+        1:Administrador
+        2:Cliente */
+
+        var listUsers= 
+            [//nombre        apellido       correo      contraseña  rol
+            ['NombreAdm1','ApellidoAdm1','administrador@gmail.com','1234Admi','1'],
+            ['NombreCliente1','ApellidoCliente1','cliente@gmail.com','1234Cliente','2']
+            ];
+        
+    
+
+
+
     emailInput.addEventListener('input', validarEmail);
     contrasenaInput.addEventListener('input', validarContrasena);
 
 
     submitButton.addEventListener('click', function(event) {
-        if (emailRegExpression.test(emailInput.value) && passwordRegExpression.test(contrasenaInput.value)) {
-            emailInput.value = '';
-            contrasenaInput.value = '';
-            mensajeError.textContent = '';
-            window.location= "https://g10-ispc.github.io/IntegradorFullStack-G10/ricco/frontend/index.html";
+        if (emailRegExpression.test(emailInput.value) && passwordRegExpression.test(contrasenaInput.value) ) {
+            if (emailInput.value==listUsers[0][2] && contrasenaInput.value==listUsers[0][3] && listUsers[0][4]=="1"){
+            window.location= "administrador.html";
+           window.alert('¡Bienvenido Administrador!');
+            }
+            if(emailInput.value==listUsers[1][2] && contrasenaInput.value==listUsers[1][3] && listUsers[1][4]=="2") {
+                    window.location= "../index.html";
+                    window.alert('Ricco Burgers valora a cada uno de sus clientes, ¡Bienvenido!');
+            }
+            else{
+            mensajeError.textContent = 'Su correo no posee una cuenta, debe registrarse.';}
+            //emailInput.value = '';
+            //contrasenaInput.value = '';
+            //mensajeError.textContent = '';
+            
         } else {
             event.preventDefault(); 
             mensajeError.textContent = 'E-mail o contraseña incorrecta.';
