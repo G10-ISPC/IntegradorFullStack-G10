@@ -38,14 +38,32 @@ Los mismos se realizarón en equipo, teniendo en cuanta los principios y valores
 + MYSQL WORKBENCH
 + PYTHON
 
+
+### SPRINT 2
+Realizamos las Historias de Usuarios en base a los requerimientos del proyecto y tambien teniendo en cuenta  la devolucion del Sprint 1; las cuales fueron asignadas a los integrantes del equipo, para tener asi una forma de trabajo mas organizada y poder no solo colaborar todos en el proyecto, sino tambien que todos podamos ir aprendiendo con practica las diferentes tecnogologias y programas utilizados.
+
+Realizamos la primera Retrospective, en la cual pudimos identificar nuestras fortaleza y debilidades para poder trabajar en ellas y asi poder trabajar mejor para el segundo Sprint. 
+
+## Objetivos 
+Realizar las mejoras indicadas en la devolucion del Sprint 1 y:
+### Frontend
++ Producción del sitio web de la tienda navegable con estructura HTML, semántica, estilos CSS y Bootstrap.
++ Formularios login y registro con sus respectivas validaciones y mensajes personalizados al usuario.
+### Backend
++ Creación de la base de datos. 
++ Modelo de Caso de Uso de cada modularización.
+
+
+## Tecnologías o programas utilizados en el Sprint 2
+A las mencionadas en el Sprint 1 sumamos:
++ JAVASCRIPT
+
+
 ## Integrantes
-+ Grade, Marisol Belén(Scrum master)
 + Juarez Manescotto, Micaela Ines 
 + Cruz, Laura Patricia 
-+ Colacci, Tomás Ardiles 
 + Figueroa, Félix Antonio 
 + Cos, Mariana
-+ Abba, Francisco Tomas
 + Arévalo, Carla Elizabeth
 + Aricoma, Delfina
 
