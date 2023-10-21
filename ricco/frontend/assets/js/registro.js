@@ -1,7 +1,6 @@
 // ----VALIDACION DE REGISTRO DE USUARIO-------
+//asignamos cada campo de registro.html a una variable
 document.addEventListener('DOMContentLoaded', function() {
-    // const emailInput = document.getElementById('logEmail');
-      //const contrasenaInput = document.getElementById('contrasenaIngreso');
       const nombreInput=document.getElementById('nombre');
       const apellidoInput= document.getElementById('apellido');
       const correoInput=document.getElementById ('correo');
@@ -12,22 +11,34 @@ document.addEventListener('DOMContentLoaded', function() {
       const cpInput= document.getElementById ('cp');
       const passwordInput= document.getElementById ('password');
       const password2Input= document.getElementById ('password2');
+      const submitButton = document.getElementById('submitButton');
       const mensajeError = document.getElementById('mensajeError');
-     const submitButton = document.getElementById('submitButton');
+
    
-       //const emailRegExpression = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-       //const passwordRegExpression = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    //asignamos las expresiones regulares regex para cada campo
        const nombreRegexpression= /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Letras y espacios, pueden llevar acentos.
        const apellidoRegExpression=  /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
        const correoRegExpression= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
        const direccionRegExpression= /^[A-Za-z0-9\s]+$/g;
-       const localidadRegExpression= /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-       const barrioRegExpression= /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+       const barrioRegExpression = /^[a-zA-ZÀ-ÿ\s]{1,40}$/; 
+       const localidadRegExpression= /^[a-zA-ZÀ-ÿ\s]{1,40}$/;        
        const telefonoRegExpression= /^[0-9]+$/;
        const cpRegExpression= /^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/
        const passRegExpression= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
        const pass2RegExpression= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-   
+
+        /*Roles:
+        1:Administrador
+        2:Cliente */
+
+        var listUsers= 
+            [//nombre        apellido       correo      contraseña  rol
+            ['NombreAdm1','ApellidoAdm1','administrador@gmail.com','1234Admi','1'],
+            ['NombreCliente1','ApellidoCliente1','cliente@gmail.com','1234Cliente','2']
+            ];
+
+    
+    // validamos cada variable con su respectivo expresion regular regex   
        function validarNombre(){
            const nombre = nombreInput.value;
            if (nombreRegexpression.test(nombre)) {
@@ -47,16 +58,25 @@ document.addEventListener('DOMContentLoaded', function() {
               ocultarMensajeError();
            }  
        }
-   
-       function validarCorreo() {
-           const correo = correoInput.value;
-           if (correoRegExpression.test(correo)) {
-               mensajeError.textContent = ''; 
+
+        function validarCorreo() {
+            const correo = correoInput.value;
+            if (correoRegExpression.test(correo)) {
+                const correoExistente = listUsers.some(user => user[2] === correo);
+                if (correoExistente) {       
+                    mensajeError.textContent = 'El correo ya está registrado. Por favor, inicia sesión.';             
+                  
+                    window.location.href = 'login.html';
+                } else {
+                    mensajeError.textContent = '';                    
+                }
             } else {
-               mensajeError.textContent = 'Ingrese un E-mail válido por favor.';
-              ocultarMensajeError();
-           }
-       }
+                mensajeError.textContent = 'Ingrese un E-mail válido por favor.';
+                ocultarMensajeError();
+            }
+        }
+   
+    
    
        function validarDireccion() {
            const direccion = direccionInput.value;
@@ -70,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
    
        function validarBarrio() {
            const barrio = barrioInput.value;
-           if (direccionRegExpression.test(barrio)) {
+           if (barrioRegExpression.test(barrio)) {
                mensajeError.textContent = ''; 
             } else {
                mensajeError.textContent = 'Ingrese un nombre de Barrio válido por favor.';
@@ -80,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
        function validarLocalidad() {
            const localidad = localidadInput.value;
-           if (direccionRegExpression.test(direccion)) {
+           if (localidadRegExpression.test(localidad)) {
                mensajeError.textContent = ''; 
             } else {
                mensajeError.textContent = 'Ingrese una Localidad válida por favor.';
@@ -121,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function validarPassword2(){
            const inputPassword1 = document.getElementById('password');
            const inputPassword2 = document.getElementById('password2');
-   
+        //validamos que sean iguales la contraseña y su verificacion
            if(inputPassword1.value == inputPassword2.value){
                mensajeError.textContent='';
            } else{
@@ -130,27 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
            }
    
        }
-   
-      // function validarEmail() {
-      //    const email = emailInput.value;
-        //  if (emailRegExpression.test(email)) {
-          //    mensajeError.textContent = ''; 
-          // } else {
-            //  mensajeError.textContent = 'Ingrese un E-mail válido por favor.';
-             //ocultarMensajeError();
-         // }
-      //}
-   
-    // function validarContrasena(){
-      //   const contrasena = contrasenaInput.value;
-        // if (passwordRegExpression.test(contrasena)) {
-          //   mensajeError.textContent='';
-         //}else{
-           //  mensajeError.textContent='La contraseña debe contener 8 caracteres, e incluir números y letras mayúsculas o minúsculas';
-             //ocultarMensajeError();
-          //}
-      //}
-   
+
+ 
+   // quedamos a la escucha de cada campo para validar
    
       nombreInput.addEventListener('input', validarNombre);
       apellidoInput.addEventListener('input', validarApellido);
@@ -162,18 +164,81 @@ document.addEventListener('DOMContentLoaded', function() {
       cpInput.addEventListener('input', validarCp);
       passwordInput.addEventListener('input', validarPassword);
       password2Input.addEventListener('input', validarPassword2);
-      //emailInput.addEventListener('input', validarEmail);
-      //ontrasenaInput.addEventListener('input', validarContrasena);
-   
-   
-    //  submitButton.addEventListener('click', function(event) {
-      //    if (emailRegExpression.test(emailInput.value) && passwordRegExpression.test(contrasenaInput.value)) {
-        //      emailInput.value = '';
-          //    contrasenaInput.value = '';
-            //  mensajeError.textContent = '';
-         // } else {
-           //   event.preventDefault(); 
-             // mensajeError.textContent = 'Ambos campos deben ser completados correctamente.';
-             // ocultarMensajeError();
-         // }
+
+
+/*Roles:
+        1:Administrador
+        2:Cliente */
+
+        var listUsers= 
+            [//nombre        apellido       correo      contraseña  rol
+            ['NombreAdm1','ApellidoAdm1','administrador@gmail.com','1234Admi','1'],
+            ['NombreCliente1','ApellidoCliente1','cliente@gmail.com','1234Cliente','2']
+            ];
+        
+
+        function enviarFormulario(event) {
+            
+            mensajeExito.textContent = 'Datos enviados exitosamente.';
+           
+            window.location.href = 'login.html';
+        }
+            
+        submitButton.addEventListener('click', enviarFormulario);
+            
+
+
+
+
+
+
+    // // creamos Lista para almacenar los datos
+    // const listaUsuarios = [];
+
+    //     function guardarUsuario() {
+    //     const usuario = {
+    //         nombre: nombreInput.value,
+    //         apellido: apellidoInput.value,
+    //         correo: correoInput.value,
+    //         direccion: direccionInput.value,
+    //         barrio: barrioInput.value,
+    //         localidad: localidadInput.value,
+    //         telefono: telefonoInput.value,
+    //         cp: cpInput.value,
+    //         password: passwordInput.value,
+    //         password2: password2Input.value,
+    //     };
+
+    //     // Verificamos si el correo ya existe en la lista
+    //     const correoExiste = listaUsuarios.some(user => user.correo === usuario.correo);
+
+    //     if (correoExiste) {
+    //         mensajeError.textContent = 'El correo ya existe.';
+    //         console.log('EXISTE...!')
+    //         return false; // Retorna false para prevenir el envío del formulario
+    //     }   
+        
+    //     listaUsuarios.push(usuario);
+    //     return true; // Retorna true para permitir el envío del formulario
+    //     }
+
+    // ////// escucha 
+    // submitButton.addEventListener('click', function(event) {
+    //     event.preventDefault(); // Previene el envío del formulario
+
+    //     if (guardarUsuario()) {
+    //         console.log(guardarUsuario())
+    //         // Elegir que accion hacer
+    //         // Como envio los datos al servidor o redirigir a otra página
+    //         console.log('Usuario guardado correctamente:', listaUsuarios);
+    //     }
+    // });
+
+
+
+
+
+      
+
+
   });
