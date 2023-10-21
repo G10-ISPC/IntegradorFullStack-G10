@@ -180,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function enviarFormulario(event) {
             
             mensajeExito.textContent = 'Datos enviados exitosamente.';
-           
             window.location.href = 'login.html';
         }
             

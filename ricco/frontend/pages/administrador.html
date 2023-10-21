@@ -59,7 +59,7 @@
         <div class="main row justify-content-center">
           <div class="p-4 mb-2 bg-secondary text-light col-8">
             <h2>Datos del producto</h2>
-          <form action="" id="productos-form" class="row justify-content-center mb-4 " autocomplete="off">
+          <form id="productos-form" class="row justify-content-center mb-4 " autocomplete="off">
             <div class="col-10 mb-3">
               <label for="nombreproducto">Nombre del producto nuevo</label>
               <input type="text" name="nombreproducto" id="nombreproducto" class="form-control" placeholder="Ingresa el nombre del producto nuevo">
@@ -77,14 +77,14 @@
               <input type="text" name="precio" id="precio" class="form-control" placeholder="Por Ejm: 2550 ">
             </div>
             <div class="col-12 col-md-10 text-end">
-              <button type="button submit" value="submit" class="btn btn-dark add-btn "><i class="fa fa-plus"></i> Añadir nuevo</button>
+              <button type="submit" value="registrar" class="btn btn-dark add-btn "><i class="fa fa-plus"></i> Añadir nuevo</button>
           </div>
          </form>
         </div>
 
           <div class="col-12 mt-5">
-            <table>
-              <table class="table table-bordered table-striped table-dark">
+            
+            <table class="table table-bordered table-striped table-dark">
                 <thead>
                     <tr>
                         <th>Producto</th>
@@ -98,7 +98,7 @@
                 <tbody id="productos-list">
                   <tr>
                       <td>KING KONG BURGER</td>
-                      <td><img src="../assets/img/bur1.jpg" height="50"  alt="foto de hamburguesa 1" id="foto" name="foto"></td>
+                      <td><img src="../assets/img/bur1.jpg" height="50"  alt="foto de hamburguesa 1" id="foto1"></td>
                       <td>Para compartir!!! 6/8 porciones. Impresionante Burger XXL de 1kg, de carne, con queso cheddar fundido, lechuga, tomate y panceta crocante</td>
                       <td>$4500</td>
                       <td>
@@ -109,17 +109,17 @@
 
                   <tr>
                     <td>TASTY RICCA</td>
-                    <td><img src="../assets/img/bur2.jpg" height="50"  alt="foto de hamburguesa 2" id="foto" name="foto"></td>
+                    <td><img src="../assets/img/bur2.jpg" height="50"  alt="foto de hamburguesa 2" id="foto2"></td>
                     <td>Pan casero. Burger de carne 220gr. Queso cheddar fundido, lechuga, tomate huevo planchado, panceta crocante y cebolla asada</td>
                     <td>$2450</td>
                     <td>
-                        <a class="edit btn btn-sm" title="Editar" id="edit" href="#"><i class="fa-solid fa-pencil"></i></a>
-                        <a class="delete btn btn-sm " title="Eliminar" id="delete" href="#"><i class="fa-solid fa-trash"></i></a>
+                        <a class="edit btn btn-sm" title="Editar" id="edit1" href="#"><i class="fa-solid fa-pencil"></i></a>
+                        <a class="delete btn btn-sm " title="Eliminar" id="delete1" href="#"><i class="fa-solid fa-trash"></i></a>
                     </td>
-                </tr>
+                  </tr>
                 
                   
-              </tbody>
+                </tbody>
 
             </table>
           </div> 

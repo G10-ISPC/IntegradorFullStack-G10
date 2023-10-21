@@ -38,7 +38,7 @@ document.querySelector("#productos-form").addEventListener("submit", (e)=>{
       const row= document.createElement("tr");
       row.innerHTML = `
         <td>${nombreproducto} </td>
-        <td><img src="../assets/img/${foto}" height="50"  alt="foto de hamburguesa" id="foto" name="foto"></td>
+        <td><img src="../assets/img/${foto}" height="50"  alt="foto de hamburguesa" id="foto"></td>
         <td>${descripcion}</td>
         <td>$${precio}</td>
         <td>
