@@ -62,7 +62,7 @@ class DAO:
               sql = "UPDATE productos SET nombre_producto = '{0}', descripcion = '{1}', precio = '{2}' WHERE id_producto = '{3}'"
               cursor.execute(sql.format(productos[1], productos[2], productos[3], productos[0]))
               self.connection.commit()
-              print("¡Producto modificado con éxito!\n")
+              print("¡Producto modificado con exitosamente!\n")
            except Error as ex: 
               print ("Error al intentar conexión: {0}".format(ex)) 
               
@@ -73,7 +73,7 @@ class DAO:
              sql = "DELETE FROM productos WHERE id_producto = %s"
              cursor.execute(sql, (id_producto,))
              self.connection.commit()
-             print("¡Producto eliminado con éxito!\n")
+             print("El producto fue eliminado correctamente\n")
            except Error as ex:
              print("Error al intentar conexión: {0}".format(ex))
 #dao = DAO()

@@ -48,7 +48,7 @@ document.querySelector("#productos-form").addEventListener("submit", (e)=>{
       `;
       list.appendChild(row);
       selectedRow = null ;
-      showAlert("Producto nuevo añadido exitosamente","success");
+      showAlert("¡Producto registrado con éxito!","success");
     }
     else {
       selectedRow.children[0].textContent= nombreproducto;
@@ -56,7 +56,7 @@ document.querySelector("#productos-form").addEventListener("submit", (e)=>{
       selectedRow.children[2].textContent= descripcion;
       selectedRow.children[3].textrContent= precio;
       selectedRow = null;
-      showAlert("Información del producto editado corrrectamente", "info");
+      showAlert("¡Producto modificado con exitosamente!", "info");
 
     }
     limpiar();
