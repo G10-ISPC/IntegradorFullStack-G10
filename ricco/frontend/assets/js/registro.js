@@ -1,5 +1,5 @@
-// ----VALIDACION DE REGISTRO DE USUARIO-------
-//asignamos cada campo de registro.html a una variable
+// ---------------------------VALIDACION DE REGISTRO DE USUARIO-------
+//-----------------asignamos cada campo de registro.html a una variable-----------------
 document.addEventListener('DOMContentLoaded', function() {
       const nombreInput=document.getElementById('nombre');
       const apellidoInput= document.getElementById('apellido');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const mensajeError = document.getElementById('mensajeError');
 
    
-    //asignamos las expresiones regulares regex para cada campo
+    //-------------------asignamos las expresiones regulares regex para cada campo--------------------------
        const nombreRegexpression= /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Letras y espacios, pueden llevar acentos.
        const apellidoRegExpression=  /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
        const correoRegExpression= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
        const passRegExpression= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
        const pass2RegExpression= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-        /*Roles:
+    /*-----------Roles:------------
         1:Administrador
         2:Cliente */
 
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
             ];
 
     
-    // validamos cada variable con su respectivo expresion regular regex   
+    //---------- validamos cada variable con su respectivo expresion regular regex ----------  
        function validarNombre(){
            const nombre = nombreInput.value;
            if (nombreRegexpression.test(nombre)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese un nombre válido por favor.';
+               mensajeError.textContent = 'Ingrese solo letras mayusculas y minusculas.';
               ocultarMensajeError();
            }  
        }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
            if (apellidoRegExpression.test(apellido)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese un apellido válido por favor.';
+               mensajeError.textContent = 'Ingrese solo letras mayusculas y minusculas.';
               ocultarMensajeError();
            }  
        }
@@ -65,8 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const correoExistente = listUsers.some(user => user[2] === correo);
                 if (correoExistente) {       
                     mensajeError.textContent = 'El correo ya está registrado. Por favor, inicia sesión.';             
-                  
-                    window.location.href = 'login.html';
+
                 } else {
                     mensajeError.textContent = '';                    
                 }
@@ -83,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
            if (direccionRegExpression.test(direccion)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese una Dirección válida por favor.';
-              ocultarMensajeError();
+               mensajeError.textContent = 'Comience con letra mauyscula, seguido de minusculas y el número de altura.';
+               ocultarMensajeError();
            }
        }
    
@@ -93,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
            if (barrioRegExpression.test(barrio)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese un nombre de Barrio válido por favor.';
-              ocultarMensajeError();
+               mensajeError.textContent = 'Ingrese solo letras y números. No caracteres.';
+               ocultarMensajeError();
            }
        }
     
@@ -103,8 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
            if (localidadRegExpression.test(localidad)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese una Localidad válida por favor.';
-              ocultarMensajeError();
+               mensajeError.textContent = 'Ingrese solo letras y números. No caracteres.';
+               ocultarMensajeError();
            }
        }
    
@@ -113,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
            if (telefonoRegExpression.test(telefono)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese un teléfono válido por favor.';
-              ocultarMensajeError();
+               mensajeError.textContent = 'Ingrese solo números, sin caracteres .';
+               ocultarMensajeError();
            }
        }
    
@@ -123,8 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
            if (cpRegExpression.test(cp)) {
                mensajeError.textContent = ''; 
             } else {
-               mensajeError.textContent = 'Ingrese un Código Postal válido por favor.';
-              ocultarMensajeError();
+               mensajeError.textContent = 'Ingrese cinco dígitos.';
+               ocultarMensajeError();
            }
        }
    
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
            if (passRegExpression.test(password)) {
                mensajeError.textContent='';
            }else{
-               mensajeError.textContent='La contraseña debe contener 8 caracteres, e incluir números y letras mayúsculas o minúsculas';
+               mensajeError.textContent='La contraseña debe contener entre 8 y 12 caracteres, e incluir números, letras mayúsculas y/o minúsculas';
                ocultarMensajeError();
             }
         }
@@ -141,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function validarPassword2(){
            const inputPassword1 = document.getElementById('password');
            const inputPassword2 = document.getElementById('password2');
-        //validamos que sean iguales la contraseña y su verificacion
+//-------------------alidamos que sean iguales la contraseña y su verificacion------------------------
            if(inputPassword1.value == inputPassword2.value){
                mensajeError.textContent='';
            } else{
@@ -152,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
        }
 
  
-   // quedamos a la escucha de cada campo para validar
+   // ----------------------quedamos a la escucha de cada campo para validar---------------------------------------
    
       nombreInput.addEventListener('input', validarNombre);
       apellidoInput.addEventListener('input', validarApellido);
@@ -165,10 +164,36 @@ document.addEventListener('DOMContentLoaded', function() {
       passwordInput.addEventListener('input', validarPassword);
       password2Input.addEventListener('input', validarPassword2);
 
+//-----------------------Enviar a login-------------------------
+
+submitButton.addEventListener('click', function(event) {
+               
+        if (nombreRegexpression.test(nombreInput.value) &&
+         apellidoRegExpression.test(apellidoInput.value) && 
+         correoRegExpression.test(correoInput.value) && 
+         direccionRegExpression.test(direccionInput.value) &&
+         barrioRegExpression.test(barrioInput.value) &&
+         localidadRegExpression.test(localidadInput.value)&&
+         telefonoRegExpression.test(telefonoInput.value) &&
+         cpRegExpression.test(cpInput.value) &&
+         passRegExpression.test(passwordInput.value) &&
+         pass2RegExpression.test(password2Input.value)) {
+
+           // console.log('Formulario válido. Redirigiendo a login.html');
+            window.location.href = "login.html";
+            window.alert('¡Bienvenido a Ricco Burgers!');
+        }else {
+                   event.preventDefault(); 
+                   mensajeError.textContent = '';
+                   ocultarMensajeError();
+               }
+             
+           });
+
 
 /*Roles:
         1:Administrador
-        2:Cliente */
+        2:Cliente 
 
         var listUsers= 
             [//nombre        apellido       correo      contraseña  rol
@@ -183,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'login.html';
         }
             
-        submitButton.addEventListener('click', enviarFormulario);
+        submitButton.addEventListener('click', enviarFormulario);*/
             
 
 
@@ -233,11 +258,10 @@ document.addEventListener('DOMContentLoaded', function() {
     //     }
     // });
 
-
-
-
-
-      
-
+    function ocultarMensajeError() {
+        setTimeout(function() {
+            mensajeError.textContent = '';
+        }, 3000);
+    }
 
   });

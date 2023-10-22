@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (passwordRegExpression.test(contrasena)) {
             mensajeError.textContent='';
         }else{
-            mensajeError.textContent='La contraseña debe contener 8 caracteres, e incluir números y letras mayúsculas o minúsculas';
+            mensajeError.textContent='La contraseña debe contener entre 8 y 11 caracteres, e incluir números, letras mayúsculas y/o minúsculas';
             ocultarMensajeError();
         }
     }
